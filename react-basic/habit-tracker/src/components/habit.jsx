@@ -1,15 +1,6 @@
 import React, { PureComponent } from 'react';
 
 class Habit extends PureComponent {
-
-  componentDidMount(){
-    console.log(`habits: ${this.props.habit.name} mounted`);
-  }
-
-  componentWillUnmount(){
-    console.log(`habits: ${this.props.habit.name} will unmount`);
-  }
-
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   };
@@ -24,6 +15,7 @@ class Habit extends PureComponent {
 
   render() {
     const { name, count } = this.props.habit;
+    console.log(`habit: ${name}`);
     return (
       <li className="habit">
         <span className="habit-name">{name}</span>
