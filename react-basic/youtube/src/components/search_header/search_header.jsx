@@ -41,3 +41,4 @@ const SearchHeader = ({ onSearch }) => {
 };
 
 export default SearchHeader;
+  
